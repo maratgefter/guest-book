@@ -23,3 +23,26 @@
     </div>
 </body>
 </html>
+
+<?php
+
+    for ($i=1; $i <= 10; $i++) { 
+        echo $i."<br>";
+    }
+
+    $a = 1;
+    while ($a <= 10) {
+        echo $a."<br>";
+        $a++;
+    }
+
+    $j = 1;
+    do {
+        echo $j."<br>";
+        $j++;
+    } while ($j <= 10);
+
+    foreach (range(1, 10) as $array) {
+        echo $array."<br>";
+    }
+?>
