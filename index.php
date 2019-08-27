@@ -45,4 +45,6 @@
     foreach (range(1, 10) as $array) {
         echo $array."<br>";
     }
+
+    echo "second branch";
 ?>
