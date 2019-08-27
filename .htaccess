@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^(.*)$ /public/$0 [QSA, L]
+RewriteRule ^(.*)$ /public/$0 [QSA,L]
