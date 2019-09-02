@@ -16,6 +16,12 @@ class SiteController extends Controller {
         ]);
     }
 
+    function actionFeedback () {
+        $this->render("feedback", [
+            'title' => "Feedback"
+        ]);
+    }
+
 }
 
 ?>
