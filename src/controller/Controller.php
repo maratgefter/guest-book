@@ -1,15 +1,16 @@
 <?php
 
-namespace App\controller;
+namespace App\Controller;
 
 use App\View\View;
+use ReflectionClass;
 
 abstract class Controller {
     
     public $view;
 
     function __construct() {
-        $this->view = new View;
+        $this->view = new View();
     }
 
     function render($viewName, $viewData = []) {
@@ -21,7 +22,8 @@ abstract class Controller {
     }
 
     function classNameNP() {
-        return strtolower(preg_replace('/Controller$/', '', get_class($this)));
+        // (new ReflectionClass($this))->getShortName()
+        return strtolower(preg_replace('/Controller$/', '', (new ReflectionClass($this))->getShortName()));
     }
 
     function currentActionNameNP() {

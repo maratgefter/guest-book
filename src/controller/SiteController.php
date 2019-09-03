@@ -1,6 +1,6 @@
 <?php
 
-namespace App\controller;
+namespace App\Controller;
 
 class SiteController extends Controller {
 
@@ -13,12 +13,6 @@ class SiteController extends Controller {
     function actionAbout () {
         $this->render("about", [
             'title' => "About Us"
-        ]);
-    }
-
-    function actionFeedback () {
-        $this->render("feedback", [
-            'title' => "Feedback"
         ]);
     }
 
