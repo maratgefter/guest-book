@@ -23,7 +23,7 @@
         <a class="nav-link" href="?t=site&a=About">About us<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="?t=TicTacToe&a=ShowField">Крестики-Нолики<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="?t=site&a=feedback">Feedback<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
