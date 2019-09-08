@@ -1,13 +1,14 @@
 <?php
 
 namespace App\Core;
+use App\Core\Config;
 
 class Router {
 
     function __construct()
     {
-        $this->controllerName = ($_GET["t"] ?? 'Site') . 'Controller';
-        $this->actionName = 'action' . ($_GET["a"] ?? 'home');
+        $this->controllerName = ($_GET["t"] ?? Config::DEFAULT_CONTROLLER) . 'Controller';
+        $this->actionName = 'action' . ($_GET["a"] ?? Config::DEFAULT_ACTION);
         // $view = 'siteView';
     }
 
