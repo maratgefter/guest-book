@@ -8,7 +8,7 @@ class SerializeStorage extends CrudEntity
     function get()
     {
 
-        $this->checkFileExists();
+        parent::get();
         return unserialize(file_get_contents($this->file_name));
 
     }

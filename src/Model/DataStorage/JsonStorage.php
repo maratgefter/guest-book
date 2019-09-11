@@ -8,7 +8,7 @@ class JsonStorage extends CrudEntity
     function get()
     {
 
-        $this->checkFileExists();
+        parent::get();
         return json_decode(file_get_contents($this->file_name), true);
 
     }

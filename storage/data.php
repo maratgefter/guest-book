@@ -1,1 +1,2 @@
-{"0":{"nick":"","message":"Enter your message"}}
+<?php return array (
+);

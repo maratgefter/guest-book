@@ -19,11 +19,20 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
+    <li class="nav-item">
         <a class="nav-link" href="?t=site&a=About">About us<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="?t=FeedBackAdmin&a=Show">AdminPanel<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="?t=Auth&a=LoginForm">login<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="?t=FeedBack&a=ShowForm">FeedBack<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="?t=Auth&a=Logout">logout<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -41,6 +50,9 @@
     </form>
   </div>
 </nav>
+<div class="user_name">
+  <?=$_SESSION['autorized_user'] ?? ''?>
+</div>
     <div id='maincontent'>
         <?php $this->body(); ?>
     </div>

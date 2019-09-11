@@ -8,29 +8,37 @@ class CsvStorage extends CrudEntity
     function get()
     {
 
-        $this->checkFileExists();
+        parent::get();
+
         $array = file($this->file_name);
-        print_r($array);
         $res = [];
 
-        foreach ($data_array as $row) {
-            
-            $csv .= explode(';', $row);
+        foreach ($array as $row) {
+            $buf = explode(';', $row);
+            $key=$buf[0]; 
+            unset($buf[0]);
+            $res[$key] = array_values($buf);
         }
+// print_r($res);
         return $res;
     }
 
     function write_file(array $data_array)
     {
+
         $csv = '';
-        foreach ($data_array as $row) {
-            
-            $csv .= implode(';', $row)."\n";
+        
+        if (!empty($data_array)) {
+
+            foreach ($data_array as $key => $row) {
+
+                $csv .= $key . ';' . implode(';', $row);
+            }
+
+            $csv .= "\n";
+
         }
-        print_r($csv);
+        
         file_put_contents($this->file_name, $csv);
     }
-
 }
-
-?>

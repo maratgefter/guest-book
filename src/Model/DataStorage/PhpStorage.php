@@ -8,7 +8,7 @@ class PhpStorage extends CrudEntity
     function get()
     {
 
-        $this->checkFileExists('<?php return [];');
+        parent::get();
         return include($this->file_name);
 
     }

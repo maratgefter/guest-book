@@ -2,3 +2,16 @@ body {
   background-color: aqua;
   color: red;
 }
+
+body .user_name {
+  color: red;
+  text-align: right;
+  margin-right: 20px;
+}
+
+body td {
+  border: 2px solid black;
+  font-size: 14px;
+  color: black;
+}
+/*# sourceMappingURL=style.css.map */
